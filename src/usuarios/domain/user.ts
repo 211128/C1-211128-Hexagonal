@@ -6,6 +6,7 @@ export class User {
         public phone: string,
         public password: string, // Debe almacenarse de forma segura (hash + salt)
         public active: boolean,
+        public canlent: boolean
      ){}
     
    

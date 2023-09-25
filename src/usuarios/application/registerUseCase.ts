@@ -9,7 +9,8 @@ export class RegisterUseCase {
     email: string,
     phone: string,
     password: string, // Debe almacenarse de forma segura (hash + salt)
-    active: boolean
+    active: boolean,
+    canlent: boolean
   ): Promise<User | null> {
     try {
       const createNewUser = await this.userRepository.registerUser(
@@ -17,7 +18,8 @@ export class RegisterUseCase {
         email,
         phone,
         password,
-        active
+        active = true,
+        canlent = true
       );
 
 
